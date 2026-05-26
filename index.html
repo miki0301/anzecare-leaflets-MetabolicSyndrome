@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【安澤健康守護】解讀身體的綜合預警：陪你一起熄滅「五大警示燈」，找回健康新動力</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts (Noto Sans TC) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 引入 FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 引入 MathJax 處理 LaTeX 數學及科學符號 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2a5599', // 搭配安澤LOGO的深藍色
+                            light: '#fffaf5', // 柔和溫暖的淡橘/米色背景 (象徵健康新動力)
+                            accent: '#f97316' // 警示橘/暖陽調
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fffaf5; /* 柔和暖米色 */
+            background-image: radial-gradient(#fed7aa 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2a5599, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media print {
+            body { background: white; }
+            .glass-card { box-shadow: none; border: none; max-width: 100%; margin: 0; padding: 0; }
+            @page { margin: 0.5cm 0.7cm; size: A4 portrait; }
+            .no-print { display: none; }
+            /* 強制列印時內文字體至少 14pt，並縮減空隙以保證 A4 一頁 */
+            p, .print-text-large { font-size: 14pt !important; line-height: 1.4 !important; }
+            h3 { font-size: 14pt !important; }
+            h2 { font-size: 16pt !important; }
+            .text-xs { font-size: 10pt !important; }
+            .print-py-none { padding-top: 0px !important; padding-bottom: 0px !important; }
+            .print-my-small { margin-top: 3px !important; margin-bottom: 3px !important; }
+            .print-gap-small { gap: 8px !important; }
+            .print-p-small { padding: 8px !important; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen py-3 px-4 md:px-8">
+
+    <!-- 主容器 -->
+    <div class="max-w-4xl mx-auto glass-card rounded-3xl shadow-xl overflow-hidden">
+        
+        <!-- 頂部/標題區 -->
+        <header class="bg-white px-6 py-4 md:py-6 border-b-4 border-brand text-center relative print-py-none">
+            <!-- 裝飾背景 -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                <i class="fa-solid fa-gauge-high absolute -right-10 -top-10 text-9xl text-brand"></i>
+                <i class="fa-solid fa-heartpulse absolute left-5 bottom-5 text-6xl text-brand-accent"></i>
+            </div>
+
+            <!-- LOGO -->
+            <img src="安澤健康顧問%20Anzecare%20Health.png" alt="安澤健康顧問 Anzecare Health" class="h-11 md:h-13 mx-auto mb-2 relative z-10 object-contain">
+            
+            <p class="text-brand font-bold tracking-widest mb-1 text-base md:text-lg relative z-10">【安澤健康守護】</p>
+            <h1 class="text-2xl md:text-3.5xl font-black text-brand leading-tight relative z-10">
+                解讀身體的綜合預警<br>
+                <span class="text-xl md:text-2.5xl mt-1.5 block text-gray-700 font-bold">陪你一起熄滅「<span class="gradient-text">五大警示燈</span>」，找回健康新動力</span>
+            </h1>
+        </header>
+
+        <!-- 內容區 -->
+        <main class="p-5 md:p-8 space-y-5 print-p-small">
+
+            <!-- 我們的身體發生了什麼事？ -->
+            <section class="space-y-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-brand text-white w-9 h-9 rounded-full flex items-center justify-center text-lg shadow-md shrink-0">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-800">我們的身體發生了什麼事？</h2>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed text-base md:text-lg font-medium print-text-large">
+                    「代謝症候群」其實不是一種特定的疾病，而是身體在變成慢性病之前的<strong>「警訊大集合」</strong>。想像體內有一座精密的「能量轉運站」，當長期壓力大、久坐、缺乏運動時，五個核心管道（警示燈）就會開始出現回堵。如果以下指標不小心集滿了 <strong>3 個（含）以上</strong>，身體就在發出預警：
+                </p>
+
+                <!-- 五大警示燈控制面板 (橫向排版 / 打印優化) -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 print-gap-small">
+                    <!-- 燈 1 -->
+                    <div class="bg-amber-50/70 border-t-4 border-amber-500 p-3 rounded-b-xl shadow-sm text-center print-p-small">
+                        <span class="text-xs font-black text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full inline-block mb-1">警示 1</span>
+                        <h3 class="text-base font-bold text-gray-800 mb-1">腰圍過大</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-1">核心引擎室太擁擠</p>
+                        <span class="text-sm font-bold text-amber-800">男 $\ge 90$、女 $\ge 80\text{ cm}$</span>
+                    </div>
+
+                    <!-- 燈 2 -->
+                    <div class="bg-amber-50/70 border-t-4 border-amber-500 p-3 rounded-b-xl shadow-sm text-center print-p-small">
+                        <span class="text-xs font-black text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full inline-block mb-1">警示 2</span>
+                        <h3 class="text-base font-bold text-gray-800 mb-1">血壓偏高</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-1">血管管道壓力變大</p>
+                        <span class="text-xs font-bold text-amber-800">$\ge 130/85\text{ mmHg}$</span>
+                    </div>
+
+                    <!-- 燈 3 -->
+                    <div class="bg-amber-50/70 border-t-4 border-amber-500 p-3 rounded-b-xl shadow-sm text-center print-p-small">
+                        <span class="text-xs font-black text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full inline-block mb-1">警示 3</span>
+                        <h3 class="text-base font-bold text-gray-800 mb-1">空腹血糖高</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-1">細胞燃料塞車路上</p>
+                        <span class="text-sm font-bold text-amber-800">$\ge 100\text{ mg/dL}$</span>
+                    </div>
+
+                    <!-- 燈 4 -->
+                    <div class="bg-amber-50/70 border-t-4 border-amber-500 p-3 rounded-b-xl shadow-sm text-center print-p-small">
+                        <span class="text-xs font-black text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full inline-block mb-1">警示 4</span>
+                        <h3 class="text-base font-bold text-gray-800 mb-1">三酸甘油酯高</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-1">血液河道浮油太多</p>
+                        <span class="text-sm font-bold text-amber-800">$\ge 150\text{ mg/dL}$</span>
+                    </div>
+
+                    <!-- 燈 5 -->
+                    <div class="bg-amber-50/70 border-t-4 border-amber-500 p-3 rounded-b-xl shadow-sm text-center col-span-2 md:col-span-1 print-p-small">
+                        <span class="text-xs font-black text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full inline-block mb-1">警示 5</span>
+                        <h3 class="text-base font-bold text-gray-800 mb-1">好膽固醇低</h3>
+                        <p class="text-xs text-gray-500 font-medium mb-1">血管清道夫不夠用</p>
+                        <span class="text-xs font-bold text-amber-800">男 $< 40$、女 $< 50\text{ mg/dL}$</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 核心生活處方 -->
+            <section class="space-y-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-brand-accent text-white w-9 h-9 rounded-full flex items-center justify-center text-lg shadow-md">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-800">核心生活處方：三個生活微調，我們一起做！</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 print-gap-small">
+                    <!-- 餐盤魔法 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:-translate-y-0.5 transition duration-300 print-p-small">
+                        <div>
+                            <div class="bg-orange-50 text-orange-600 w-11 h-11 mx-auto rounded-full flex items-center justify-center text-xl mb-2">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 text-center mb-1">🍱 餐盤：少精緻、多原形</h3>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium print-text-large">
+                                <strong>與糖玩躲貓貓：</strong>試著把手搖飲「減半」，或改成微糖、無糖。<br>
+                                <strong>多吃原形食物：</strong>便當多選一格蔬菜，糙米飯取代白飯。膳食纖維就是最棒的「控糖吸油面紙」。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 步伐魔法 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:-translate-y-0.5 transition duration-300 print-p-small">
+                        <div>
+                            <div class="bg-emerald-50 text-emerald-600 w-11 h-11 mx-auto rounded-full flex items-center justify-center text-xl mb-2">
+                                <i class="fa-solid fa-shoe-prints"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 text-center mb-1">🚶 步伐：每日微運動 15分</h3>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium print-text-large">
+                                <strong>累積就是力量：</strong>下班提早一站下車走路、倒垃圾多繞社區一圈。<br>
+                                <strong>每週 150 分鐘：</strong>累積溫和快走，能快速幫引擎室減壓、召喚更多血管清道夫。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 睡眠魔法 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between hover:-translate-y-0.5 transition duration-300 print-p-small">
+                        <div>
+                            <div class="bg-blue-50 text-blue-600 w-11 h-11 mx-auto rounded-full flex items-center justify-center text-xl mb-2">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 text-center mb-1">🧘 睡眠：關閉壓力荷爾蒙</h3>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium print-text-large">
+                                <strong>今晚早睡30分鐘：</strong>長期熬夜和高壓力，會釋放壓力荷爾蒙，將熱量鎖在肚子裡。<br>
+                                <strong>睡前放下手機：</strong>給自己專屬充電時間，讓儲脂司令下班。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 建議就醫與諮詢管道 -->
+            <section class="grid md:grid-cols-2 gap-4 pt-1 print-gap-small">
+                <!-- 建議就醫科別 -->
+                <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 flex flex-col justify-center print-p-small">
+                    <h3 class="text-base md:text-lg font-bold text-gray-800 mb-1.5 flex items-center gap-2">
+                        <i class="fa-solid fa-stethoscope text-brand"></i> 建議就醫 / 追蹤科別
+                    </h3>
+                    <p class="text-gray-600 text-xs md:text-sm mb-2 leading-tight">
+                        數據雖然亮起警示，但只要開始微調，完全有機會重新變回綠燈！若超標三項以上，建議預約：
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-brand text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">家庭醫學科</span>
+                        <span class="bg-brand text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">新陳代謝科</span>
+                    </div>
+                </div>
+
+                <!-- 安心諮詢管道 -->
+                <div class="bg-brand text-white p-4 rounded-2xl shadow-lg relative overflow-hidden print-p-small">
+                    <div class="absolute -right-4 -bottom-4 opacity-10">
+                        <i class="fa-solid fa-comments text-7xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1 flex items-center gap-2 relative z-10 text-base md:text-lg">
+                        <i class="fa-solid fa-heart-circle-check"></i> 在通往健康的路上，你從不孤單
+                    </h3>
+                    <p class="text-brand-light text-sm md:text-base leading-relaxed relative z-10 font-medium print-text-large">
+                        我是您的臨場服務護理師，隨時都在。不管是想看懂報告的細節，還是想聊聊外食便當怎麼挑，安澤永遠是您最溫暖的靠山！
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 頁尾/免責聲明 -->
+        <footer class="bg-gray-100 py-3 px-6 text-center border-t border-gray-200 flex flex-col items-center">
+            <!-- 頁尾 LOGO -->
+            <img src="安澤健康顧問%20Anzecare%20Health.png" alt="安澤健康顧問 Anzecare Health" class="h-8 md:h-9 mb-2 object-contain opacity-75">
+            
+            <p class="text-xs md:text-sm text-gray-600 flex items-center justify-center gap-2 font-medium">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                免責聲明：本單張僅供健康衛教參考，具體診斷與治療請遵照醫囑。
+            </p>
+            <p class="text-xs text-gray-400 mt-1">&copy; 安澤健康顧問 Anzecare Health Consulting</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
